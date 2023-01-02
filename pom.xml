@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.rczy</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.huangli</groupId>
+	<artifactId>mq-distributedTransactionStudy</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>mq-transactionBankOne</name>
+	<description>Demo project for Spring Boot</description>
+
+
+
+	<!--<properties>-->
+		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+		<!--<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+		<!--<java.version>1.8</java.version>-->
+		<!--<spring-cloud.version>Edgware.SR1</spring-cloud.version>-->
+	<!--</properties>-->
+
+	<dependencies>
+		<!-- spring相关框架 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+		</dependency>
+		<!-- mybatis-plus生成工具 -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.3.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- 中间件依赖 -->
+		<dependency>
+			<groupId>com.ctrip.framework.apollo</groupId>
+			<artifactId>apollo-client</artifactId>
+		</dependency>
+		<!--redis依赖配置-->
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.rocketmq</groupId>
+			<artifactId>rocketmq-spring-boot-starter</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- zookeeper客户端-->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>javassist</artifactId>
+					<groupId>org.javassist</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<!-- 第三方工具 -->
+		<!-- 分页插件pagehelper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>jsqlparser</artifactId>
+					<groupId>com.github.jsqlparser</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- http工具 -->
+		<dependency>
+			<groupId>com.github.lianjiatech</groupId>
+			<artifactId>retrofit-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-core</artifactId>
+		</dependency>
+		<!-- logback依赖 -->
+		<dependency>
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+		</dependency>
+		<!-- swagger工具 -->
+		<dependency>
+			<groupId>com.spring4all</groupId>
+			<artifactId>swagger-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- 二方包 -->
+		<!-- common包 -->
+		<dependency>
+			<groupId>com.rczy</groupId>
+			<artifactId>rczy-common-starter</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	<!--	<dependency>
+			<groupId>com.rczy</groupId>
+			<artifactId>demo-shared</artifactId>
+			<version>1.0.0</version>
+		</dependency>-->
+
+		<!-- 测试工具 -->
+		<dependency>
+			<groupId>com.alibaba.testable</groupId>
+			<artifactId>testable-core</artifactId>
+			<version>0.5.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>objenesis</artifactId>
+					<groupId>org.objenesis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<finalName>mq-distributedTransactionStudy</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

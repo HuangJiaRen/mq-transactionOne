@@ -8,7 +8,7 @@
 		<version>1.0.0</version>
 	</parent>
 	<groupId>com.huangli</groupId>
-	<artifactId>mq-distributedTransactionStudy</artifactId>
+	<artifactId>mq-transactionBankOne</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
